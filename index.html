@@ -1,0 +1,116 @@
+<html><head>
+<title>Haughton Drone Photography</title>
+<style>
+	body {
+		background-image: url("DJI_0058.jpg");
+		background-size: cover;
+		overflow: hidden;
+	}
+	#haughtondrone {
+		font-family: "Andalé Mono", monospace;
+		font-size: 6vw;
+		color: white;
+		position: absolute;
+		top: 30%;
+		width: 100%;
+		text-align: center;
+	}
+	#haughton {
+		font-style: italic;
+		opacity: 0;
+		animation-name: titlein;
+		animation-duration: 2.5s;
+		animation-fill-mode: forwards;
+	}
+	#drone {
+		opacity: 0;
+		animation-name: titlein;
+		animation-duration: 2.5s;
+		animation-fill-mode: forwards;
+		animation-delay: 1s;
+	}
+	#photography {
+		font-family: "Andalé Mono", monospace;
+		font-size: 6vw;
+		font-weight: bold;
+		color: white;
+		position: absolute;
+		top: 45%;
+		width: 100%;
+		text-align: center;
+		opacity: 0;
+		animation-name: titlein;
+		animation-duration: 2.5s;
+		animation-delay: 2s;
+		animation-fill-mode: forwards;
+	}
+	span {
+		display: inline-block;
+	}
+	#cambridge {
+		font-family: "Andalé Mono", monospace;
+		font-size: 2vw;
+		font-weight: bold;
+		color: white;
+		position: absolute;
+		top: 60%;
+		width: 100%;
+		text-align: center;
+		opacity: 0;
+		animation-name: titlein;
+		animation-duration: 2.5s;
+		animation-delay: 3s;
+		animation-fill-mode: forwards;
+	}
+	#mailto {
+		font-family: "Andalé Mono", monospace;
+		font-size: 1.5vw;
+		position: absolute;
+		top: 70%;
+		width: 100%;
+		text-align: center;
+		opacity: 0;
+		animation-name: titlein;
+		animation-duration: 2.5s;
+		animation-delay: 4s;
+		animation-fill-mode: forwards;
+	}
+	
+	@keyframes titlein {
+		from {
+			opacity:0%;
+			transform: translateX(6vw);
+		}
+		to {
+			opacity: 100%;
+			transform: translateX(0vw);
+		}
+	}
+	a:link {
+	  text-decoration: none;
+	  color: lightblue;
+	}
+
+	a:visited {
+	  text-decoration: none;
+	  color: lightcyan;
+	}
+
+	a:hover {
+	  text-decoration: underline;
+	  color: aliceblue;
+	}
+
+	a:active {
+	  text-decoration: underline;
+	  color: aliceblue;
+	}
+</style>
+</head>
+<body>
+	<div id="haughtondrone"><span id="haughton">haughton</span> <span id="drone">drone</span></div>
+	<div id="photography">photography</div>
+	<div id="cambridge">Cambridge, UK</div>
+	<div id="mailto"><a href="mailto:info@haughtondronephotography.co.uk">info@haughtondronephotography.co.uk</a></div>
+</body>
+</html>
