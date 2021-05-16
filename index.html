@@ -21,6 +21,7 @@
 		top: 30%;
 		width: 100%;
 		text-align: center;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	}
 	#haughton {
 		font-style: italic;
@@ -50,6 +51,7 @@
 		animation-duration: 2.5s;
 		animation-delay: 2s;
 		animation-fill-mode: forwards;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	}
 	span {
 		display: inline-block;
@@ -68,6 +70,7 @@
 		animation-duration: 2.5s;
 		animation-delay: 3s;
 		animation-fill-mode: forwards;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	}
 	#mailto {
 		font-family: "Andalé Mono", monospace;
@@ -81,6 +84,7 @@
 		animation-duration: 2.5s;
 		animation-delay: 3s;
 		animation-fill-mode: forwards;
+		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	}
 	
 	@keyframes titlein {
@@ -138,6 +142,7 @@
 		animation-play-state: paused !important;
 	}
 </style>
+<script src="easy_background.js"></script>
 </head>
 <body>
 	<div id="haughtondrone"><span id="logo"><img src="logo.svg" /></span> <span id="haughton">haughton</span> <span id="drone">drone</span></div>
@@ -153,5 +158,27 @@ window.addEventListener("load", showPage);
 function showPage() {
   document.body.classList.remove('js-loading');
 }
+
+IMAGES = [
+	"DJI_0008.jpg",
+	"DJI_0025.jpg",
+	"DJI_0037.jpg",
+	"DJI_0054.jpg",
+	"DJI_0058.jpg",
+	"DJI_0063.jpg"
+];
+
+delays = [];
+for (var i=0; i < IMAGES.length; i++)
+	delays.push(5000);
+
+easy_background("body",
+
+  {
+	slide: IMAGES,
+	delay: delays
+  }
+
+);
 </script>
 </html>
