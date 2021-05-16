@@ -131,7 +131,22 @@
 			transform: translateX(0vw);
 		}
 	}
+	
+	.js-loading *,
+	.js-loading *:before,
+	.js-loading *:after {
+		animation-play-state: paused !important;
+	}
 </style>
+<script>
+document.body.classList.add('js-loading');
+
+window.addEventListener("load", showPage);
+
+function showPage() {
+  document.body.classList.remove('js-loading');
+}
+</script>
 </head>
 <body>
 	<div id="haughtondrone"><span id="logo"><img src="logo.svg" /></span> <span id="haughton">haughton</span> <span id="drone">drone</span></div>
