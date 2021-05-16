@@ -79,7 +79,7 @@
 		opacity: 0;
 		animation-name: titlein;
 		animation-duration: 2.5s;
-		animation-delay: 4s;
+		animation-delay: 3s;
 		animation-fill-mode: forwards;
 	}
 	
@@ -112,10 +112,29 @@
 	  text-decoration: underline;
 	  color: aliceblue;
 	}
+	
+	#logo img {
+		height: 5vw;
+		width: auto;
+		animation-name: logoin;
+		animation-duration: 2.5s;
+		animation-fill-mode: forwards;
+		opacity: 0;
+	}
+	@keyframes logoin {
+		from {
+			opacity:0%;
+			transform: translateX(-6vw);
+		}
+		to {
+			opacity: 100%;
+			transform: translateX(0vw);
+		}
+	}
 </style>
 </head>
 <body>
-	<div id="haughtondrone"><span id="haughton">haughton</span> <span id="drone">drone</span></div>
+	<div id="haughtondrone"><span id="logo"><img src="logo.svg" /></span> <span id="haughton">haughton</span> <span id="drone">drone</span></div>
 	<div id="photography">photography</div>
 	<div id="cambridge">Cambridge, UK</div>
 	<div id="mailto"><a href="mailto:info@haughtondronephotography.co.uk">info@haughtondronephotography.co.uk</a></div>
