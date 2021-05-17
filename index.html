@@ -146,6 +146,7 @@
 		animation-play-state: paused !important;
 	}
 </style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="easy_background.js"></script>
 </head>
 <body>
@@ -169,20 +170,36 @@ IMAGES = [
 	"DJI_0037.jpg",
 	"DJI_0054.jpg",
 	"DJI_0058.jpg",
-	"DJI_0063.jpg"
+	"DJI_0063.jpg",
+	"visionpark.jpg",
+	"waterbeach.jpg"
 ];
 
 delays = [];
-for (var i=0; i < IMAGES.length; i++)
+loaded = 0;
+for (let i=0; i < IMAGES.length; i++) {
 	delays.push(5000);
+}
 
-easy_background("body",
+$(IMAGES).each(function(i, url){
+	var im = $('<img/>');
+	im[0].src = url;
+	im.on("load", function () {
+		loaded++;
+		if (loaded == IMAGES.length) {
+			easy_background("body",
 
-  {
-	slide: IMAGES,
-	delay: delays
-  }
+				{
+					slide: IMAGES,
+					delay: delays
+				}
+			);
+		}
+	});
+});
 
-);
+
+
+
 </script>
 </html>
