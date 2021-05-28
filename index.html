@@ -62,8 +62,7 @@
 	}
 	#cambridge {
 		font-family: "Andalé Mono", monospace;
-		font-size: 4vh;
-		font-weight: bold;
+		font-size: min(1.5vw, 2.5vh);
 		color: white;
 		position: absolute;
 		top: 65%;
@@ -76,9 +75,10 @@
 		animation-fill-mode: forwards;
 		text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 	}
-	#mailto {
+	#store {
 		font-family: "Andalé Mono", monospace;
-		font-size: 2.5vh;
+		font-size: min(3vw, 6vh);
+		font-weight: bold;
 		position: absolute;
 		top: 70%;
 		width: 100%;
@@ -99,7 +99,9 @@
 	}
 
 	#buttons img {
-		height: 10vh;
+		height: 7vh;
+		margin-left: 5px;
+		margin-right: 5px;
 		opacity: 0;
 		animation-name: fadein;
 		animation-duration: 2.5s;
@@ -179,8 +181,12 @@
 	<div id="haughtondrone"><span id="logo"><img src="logo.svg" /></span> <span id="haughton">haughton</span> <span id="drone">drone</span></div>
 	<div id="photography">photography</div>
 	<div id="cambridge">Cambridge, UK</div>
-	<div id="mailto"><a href="mailto:info@haughtondronephotography.co.uk">info@haughtondronephotography.co.uk</a></div>
-	<div id="buttons"><a href="http://www.instagram.com/haughtondronephotography"><img src="instagram.png" /></a></div>
+	<div id="store"><a href="http://haughtondronephotography.picfair.com">Store</a></div>
+	<div id="buttons">
+		<a href="http://www.instagram.com/haughtondronephotography"><img src="instagram.png" /></a>
+		<a href="http://www.facebook.com/haughtondronephotography"><img src="facebook.png" /></a>
+		<a href="mailto:info@haughtondronephotography.co.uk"><img src="email.png" /></a>
+	</div>
 </body>
 <script>
 document.body.classList.add('js-loading');
